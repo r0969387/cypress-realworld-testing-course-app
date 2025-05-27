@@ -66,6 +66,7 @@ export default function LessonLayout({
       <div id="modal" data-test="lesson-modal">
         <div className="modal-content">
           <span className="close">&times;</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="" alt="" />
         </div>
       </div>

@@ -2,7 +2,8 @@ import Link from "next/link"
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import MobileCourses from "./MobileCourses"
-import { XIcon } from "@heroicons/react/outline"
+import { XIcon } from "@heroicons/react/outline";
+import Image from "next/image";
 
 export default function MobileProgressMenu({
   content,
@@ -15,10 +16,13 @@ export default function MobileProgressMenu({
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <img
+              <Image
                 className="h-8 w-auto sm:h-10"
                 src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
                 alt=""
+                width={40}
+                height={40}
+                layout="intrinsic"
               />
             </Link>
           </div>
@@ -62,10 +66,13 @@ export default function MobileProgressMenu({
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
+                  <Image
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
                     alt="Workflow"
+                    width={32}
+                    height={32}
+                    layout="intrinsic"
                   />
                 </div>
                 <div className="-mr-2">
@@ -84,9 +91,12 @@ export default function MobileProgressMenu({
               </div>
               <hr className="my-8" />
               <div>
-                <img
+                <Image
                   src="https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/develop/public/img/rwa-readme-screenshot.png"
                   alt=""
+                  width={1280}
+                  height={849}
+                  layout="responsive"
                 />
               </div>
               <div className="relative bg-white pt-16 overflow-hidden">
