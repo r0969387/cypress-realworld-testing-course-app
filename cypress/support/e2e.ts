@@ -15,3 +15,16 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+declare global {
+  namespace Cypress {
+    interface Chainable<Subject> {
+      /**
+       * Custom command to handle password protection on a Shopify store.
+       * Enters the password if the protection form is present.
+       * @example cy.handlePasswordProtection()
+       */
+      handlePasswordProtection(): Chainable<any>;
+    }
+  }
+}

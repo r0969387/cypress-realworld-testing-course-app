@@ -24,7 +24,7 @@ describe('Shopify Store Tests', () => {
     cy.handlePasswordProtection();
   });
 
-  it('Should successfully load the homepage', () => {
+  it('Should successfully load the homepage', function() {
     // After entering password, we should be on the homepage
     cy.url().should('include', 'r0969387-realbeans.myshopify.com');
     
@@ -32,7 +32,7 @@ describe('Shopify Store Tests', () => {
     cy.get('body').should('be.visible');
   });
 
-  it('Should be able to navigate to a collection page if available', () => {
+  it('Should be able to navigate to a collection page if available', function() {
     // We need to first check if there's a menu button to expand
     cy.get('body').then(($body) => {
       // Look for a menu button first
@@ -60,7 +60,7 @@ describe('Shopify Store Tests', () => {
     });
   });
 
-  it('Should be able to navigate to a product page if available', () => {
+  it('Should be able to navigate to a product page if available', function() {
     // First try to visit the /collections/all page which typically exists
     cy.visit('/collections/all');
     
@@ -83,7 +83,7 @@ describe('Shopify Store Tests', () => {
     });
   });
 
-  it('Should have cart functionality', () => {
+  it('Should have cart functionality', function() {
     // Look for cart functionality, which might be a button, link, or icon
     cy.get('body').then($body => {
       // Look for various cart selectors that might exist
@@ -104,7 +104,7 @@ describe('Shopify Store Tests', () => {
     });
   });
 
-  it('Should have a search feature', () => {
+  it('Should have a search feature', function() {
     // Check if there's a search button, icon, or form
     cy.get('body').then(($body) => {
       const hasSearchElement = 
