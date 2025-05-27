@@ -1,3 +1,4 @@
+export {};
 describe('Shopify Store Tests', () => {
   // Get password from environment variables
   const password = Cypress.env('password');
